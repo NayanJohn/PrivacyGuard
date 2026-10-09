@@ -128,14 +128,34 @@ export const AuditPage: React.FC<AuditPageProps> = ({ onStateChange }) => {
               <p className="text-sm text-slate-300 max-w-md mx-auto">
                 {uploadError || pollError || 'Unable to parse APK package manifest.'}
               </p>
-              <button
-                type="button"
-                onClick={handleReset}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm bg-slate-800 hover:bg-slate-700 text-white border border-white/10 transition-colors"
-              >
-                <RotateCcw className="w-4 h-4" />
-                <span>Try another file</span>
-              </button>
+              {(uploadError?.toLowerCase().includes('network') || pollError?.toLowerCase().includes('network')) && (
+                <div className="text-xs text-amber-300/90 bg-amber-500/10 border border-amber-500/20 rounded-xl p-3 max-w-md mx-auto text-left space-y-1">
+                  <p className="font-semibold flex items-center gap-1.5 text-amber-200">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                    <span>Live backend is unreachable from this network</span>
+                  </p>
+                  <p className="text-slate-300">
+                    You can try uploading again (PrivacyGuard will automatically run in Client-Side Simulated Mode), or inspect the pre-computed Demo Notes report.
+                  </p>
+                </div>
+              )}
+              <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={handleReset}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm bg-slate-800 hover:bg-slate-700 text-white border border-white/10 transition-colors"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                  <span>Try another file</span>
+                </button>
+                <Link
+                  to="/report/demo-notes"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm bg-cyan-600 hover:bg-cyan-500 text-white shadow-[0_0_20px_rgba(6,182,212,0.25)] transition-colors"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Inspect Demo Report</span>
+                </Link>
+              </div>
             </div>
           ) : isAuditing ? (
             /* Real-time backend stages progress */
