@@ -1,0 +1,517 @@
+{
+  "weights": {
+    "static": 0.5,
+    "benchmark": 0.1,
+    "runtime": 0.1,
+    "tracker": 0.1,
+    "privacy": 0.1,
+    "source": 0.05,
+    "security": 0.05
+  },
+  "evidence_factors": {
+    "Observed": 1.0,
+    "Inferred": 0.65,
+    "Not Verified": 0.0
+  },
+  "claim_relation_risk": {
+    "relevant": 0,
+    "context": 50,
+    "unusual": 80,
+    "unrelated": 100
+  },
+  "default_permission_sensitivity": 50,
+  "permission_sensitivity": {
+    "android.permission.INTERNET": 20,
+    "android.permission.POST_NOTIFICATIONS": 15,
+    "android.permission.READ_MEDIA_IMAGES": 45,
+    "android.permission.READ_MEDIA_VIDEO": 45,
+    "android.permission.READ_EXTERNAL_STORAGE": 45,
+    "android.permission.WRITE_EXTERNAL_STORAGE": 55,
+    "android.permission.BLUETOOTH_CONNECT": 35,
+    "android.permission.BLUETOOTH_SCAN": 40,
+    "android.permission.ACCESS_NETWORK_STATE": 10,
+    "android.permission.ACCESS_FINE_LOCATION": 75,
+    "android.permission.ACCESS_COARSE_LOCATION": 65,
+    "android.permission.READ_CONTACTS": 80,
+    "android.permission.WRITE_CONTACTS": 80,
+    "android.permission.READ_SMS": 95,
+    "android.permission.SEND_SMS": 95,
+    "android.permission.RECEIVE_SMS": 95,
+    "android.permission.READ_PHONE_STATE": 70,
+    "android.permission.CALL_PHONE": 80,
+    "android.permission.READ_CALL_LOG": 90,
+    "android.permission.WRITE_CALL_LOG": 90,
+    "android.permission.RECORD_AUDIO": 85,
+    "android.permission.CAMERA": 70,
+    "android.permission.BODY_SENSORS": 75,
+    "android.permission.RECEIVE_BOOT_COMPLETED": 40,
+    "android.permission.WAKE_LOCK": 25,
+    "android.permission.USE_BIOMETRIC": 25,
+    "android.permission.USE_FINGERPRINT": 25,
+    "android.permission.VIBRATE": 10,
+    "android.permission.ACCESS_WIFI_STATE": 15,
+    "android.permission.CHANGE_WIFI_STATE": 30,
+    "android.permission.SYSTEM_ALERT_WINDOW": 85,
+    "android.permission.REQUEST_INSTALL_PACKAGES": 80,
+    "android.permission.ACCESS_BACKGROUND_LOCATION": 90,
+    "android.permission.ACTIVITY_RECOGNITION": 50
+  },
+  "permission_claim_keywords": {
+    "android.permission.INTERNET": [
+      "sync",
+      "cloud",
+      "online",
+      "network",
+      "connect",
+      "download",
+      "upload",
+      "stream",
+      "fetch",
+      "web",
+      "server",
+      "backup",
+      "remote",
+      "login",
+      "account",
+      "share",
+      "api",
+      "http"
+    ],
+    "android.permission.POST_NOTIFICATIONS": [
+      "notify",
+      "notification",
+      "alert",
+      "reminder",
+      "alarm",
+      "push",
+      "message",
+      "update",
+      "badge"
+    ],
+    "android.permission.READ_MEDIA_IMAGES": [
+      "image",
+      "photo",
+      "picture",
+      "gallery",
+      "attachment",
+      "import",
+      "scan",
+      "avatar",
+      "wallpaper",
+      "media"
+    ],
+    "android.permission.READ_MEDIA_VIDEO": [
+      "video",
+      "movie",
+      "clip",
+      "recording",
+      "playback",
+      "stream",
+      "player",
+      "media"
+    ],
+    "android.permission.READ_EXTERNAL_STORAGE": [
+      "file",
+      "document",
+      "import",
+      "export",
+      "save",
+      "load",
+      "storage",
+      "pdf",
+      "note",
+      "backup",
+      "attachment",
+      "folder",
+      "disk"
+    ],
+    "android.permission.WRITE_EXTERNAL_STORAGE": [
+      "save",
+      "export",
+      "download",
+      "backup",
+      "store",
+      "write",
+      "archive",
+      "keep"
+    ],
+    "android.permission.ACCESS_FINE_LOCATION": [
+      "gps",
+      "location",
+      "navigate",
+      "navigation",
+      "map",
+      "geotag",
+      "track",
+      "nearby",
+      "places",
+      "route",
+      "weather",
+      "distance",
+      "directions"
+    ],
+    "android.permission.ACCESS_COARSE_LOCATION": [
+      "location",
+      "city",
+      "region",
+      "weather",
+      "nearby",
+      "local",
+      "area",
+      "map"
+    ],
+    "android.permission.RECORD_AUDIO": [
+      "audio",
+      "voice",
+      "microphone",
+      "sound",
+      "record",
+      "memo",
+      "dictation",
+      "speech",
+      "call",
+      "podcast",
+      "music",
+      "listen"
+    ],
+    "android.permission.CAMERA": [
+      "camera",
+      "photo",
+      "picture",
+      "scan",
+      "capture",
+      "video",
+      "qr",
+      "barcode",
+      "document",
+      "lens",
+      "snap",
+      "shoot"
+    ],
+    "android.permission.READ_CONTACTS": [
+      "contact",
+      "contacts",
+      "friend",
+      "address book",
+      "invite",
+      "phonebook",
+      "sync contacts",
+      "people"
+    ],
+    "android.permission.WRITE_CONTACTS": [
+      "save contact",
+      "add contact",
+      "sync contacts",
+      "address book"
+    ],
+    "android.permission.READ_SMS": [
+      "sms",
+      "text message",
+      "otp",
+      "verification code",
+      "verify code",
+      "inbox"
+    ],
+    "android.permission.SEND_SMS": [
+      "sms",
+      "send text",
+      "message",
+      "invite friend",
+      "texting"
+    ],
+    "android.permission.RECEIVE_SMS": [
+      "sms",
+      "otp",
+      "verify",
+      "code",
+      "transaction alert",
+      "incoming text"
+    ],
+    "android.permission.READ_PHONE_STATE": [
+      "call",
+      "phone",
+      "cellular",
+      "sim",
+      "voip",
+      "telephony",
+      "device id",
+      "carrier"
+    ],
+    "android.permission.CALL_PHONE": [
+      "call",
+      "dial",
+      "phone",
+      "hotline",
+      "emergency",
+      "telephone"
+    ],
+    "android.permission.READ_CALL_LOG": [
+      "call log",
+      "call history",
+      "recents",
+      "missed calls"
+    ],
+    "android.permission.WRITE_CALL_LOG": [
+      "call log",
+      "clear calls",
+      "call history"
+    ],
+    "android.permission.RECEIVE_BOOT_COMPLETED": [
+      "boot",
+      "startup",
+      "restart",
+      "alarm",
+      "schedule",
+      "persistent",
+      "service",
+      "widget",
+      "autostart"
+    ],
+    "android.permission.WAKE_LOCK": [
+      "audio",
+      "playback",
+      "screen on",
+      "keep awake",
+      "timer",
+      "sleep",
+      "download",
+      "player",
+      "background"
+    ],
+    "android.permission.BLUETOOTH_CONNECT": [
+      "bluetooth",
+      "connect",
+      "device",
+      "accessory",
+      "headphone",
+      "speaker",
+      "sync",
+      "smartwatch",
+      "pair"
+    ],
+    "android.permission.BLUETOOTH_SCAN": [
+      "bluetooth",
+      "scan",
+      "discover",
+      "nearby device",
+      "beacon",
+      "find device"
+    ],
+    "android.permission.BODY_SENSORS": [
+      "heart rate",
+      "sensor",
+      "health",
+      "fitness",
+      "pulse",
+      "biometric",
+      "step",
+      "vital"
+    ],
+    "android.permission.USE_BIOMETRIC": [
+      "fingerprint",
+      "face unlock",
+      "biometric",
+      "auth",
+      "security",
+      "login",
+      "sign in",
+      "unlock"
+    ],
+    "android.permission.USE_FINGERPRINT": [
+      "fingerprint",
+      "biometric",
+      "auth",
+      "security",
+      "login"
+    ],
+    "android.permission.VIBRATE": [
+      "haptic",
+      "vibrate",
+      "feedback",
+      "buzz",
+      "notification",
+      "alert"
+    ],
+    "android.permission.ACCESS_NETWORK_STATE": [
+      "network",
+      "connection",
+      "internet",
+      "online",
+      "offline",
+      "connectivity",
+      "wifi"
+    ],
+    "android.permission.ACCESS_WIFI_STATE": [
+      "wifi",
+      "wi-fi",
+      "network",
+      "hotspot"
+    ],
+    "android.permission.CHANGE_WIFI_STATE": [
+      "wifi",
+      "wi-fi",
+      "hotspot",
+      "toggle wifi"
+    ],
+    "android.permission.SYSTEM_ALERT_WINDOW": [
+      "overlay",
+      "floating",
+      "bubble",
+      "picture-in-picture",
+      "draw over",
+      "popup"
+    ],
+    "android.permission.REQUEST_INSTALL_PACKAGES": [
+      "installer",
+      "package",
+      "update app",
+      "apk installer"
+    ],
+    "android.permission.ACCESS_BACKGROUND_LOCATION": [
+      "background tracking",
+      "geofence",
+      "trip tracker",
+      "always location"
+    ],
+    "android.permission.ACTIVITY_RECOGNITION": [
+      "step",
+      "walk",
+      "run",
+      "exercise",
+      "activity",
+      "motion"
+    ]
+  },
+  "category_context_permissions": {
+    "note-taking": [
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.READ_MEDIA_IMAGES",
+      "android.permission.VIBRATE",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "messaging": [
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.CAMERA",
+      "android.permission.READ_MEDIA_IMAGES",
+      "android.permission.READ_MEDIA_VIDEO",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "photography": [
+      "android.permission.CAMERA",
+      "android.permission.READ_MEDIA_IMAGES",
+      "android.permission.READ_MEDIA_VIDEO",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.INTERNET",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "social": [
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.CAMERA",
+      "android.permission.READ_MEDIA_IMAGES",
+      "android.permission.READ_MEDIA_VIDEO",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.READ_CONTACTS",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.VIBRATE",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "finance": [
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.USE_BIOMETRIC",
+      "android.permission.USE_FINGERPRINT",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.CAMERA",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "games": [
+      "android.permission.INTERNET",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "utilities": [
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.VIBRATE",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.WAKE_LOCK"
+    ],
+    "navigation": [
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.WAKE_LOCK",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "productivity": [
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.VIBRATE",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "health-and-fitness": [
+      "android.permission.BODY_SENSORS",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACTIVITY_RECOGNITION",
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "education": [
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.READ_MEDIA_IMAGES",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "shopping": [
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.CAMERA",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "entertainment": [
+      "android.permission.INTERNET",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.WAKE_LOCK",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.READ_MEDIA_VIDEO",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "food-delivery": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.CAMERA",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ]
+  }
+}

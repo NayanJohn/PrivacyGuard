@@ -1,0 +1,85 @@
+{
+  "app_name": "Demo Notes",
+  "package_name": "com.example.demonotes",
+  "category": "note-taking",
+  "claim": "A simple note-taking application for creating, editing and saving notes.",
+  "permissions": [
+    {
+      "permission": "android.permission.INTERNET",
+      "sensitivity": 20,
+      "claim_relation": "relevant",
+      "evidence": "Observed",
+      "reason": "Network synchronization is plausible for notes."
+    },
+    {
+      "permission": "android.permission.POST_NOTIFICATIONS",
+      "sensitivity": 15,
+      "claim_relation": "relevant",
+      "evidence": "Observed",
+      "reason": "Reminder/notification functionality can be relevant."
+    },
+    {
+      "permission": "android.permission.CAMERA",
+      "sensitivity": 70,
+      "claim_relation": "context",
+      "evidence": "Observed",
+      "reason": "Camera could support scanning handwritten notes, but the claim does not mention it."
+    },
+    {
+      "permission": "android.permission.RECORD_AUDIO",
+      "sensitivity": 85,
+      "claim_relation": "unrelated",
+      "evidence": "Observed",
+      "reason": "Voice recording is not stated as a feature."
+    },
+    {
+      "permission": "android.permission.ACCESS_FINE_LOCATION",
+      "sensitivity": 75,
+      "claim_relation": "unrelated",
+      "evidence": "Observed",
+      "reason": "Location is not connected to the stated note-taking purpose."
+    }
+  ],
+  "runtime_events": [
+    {
+      "event_type": "microphone_access",
+      "severity": 90,
+      "evidence": "Observed",
+      "expected": false,
+      "description": "Microphone access was observed during controlled testing."
+    },
+    {
+      "event_type": "location_access",
+      "severity": 85,
+      "evidence": "Inferred",
+      "expected": false,
+      "description": "Location-related behavior was inferred from available telemetry."
+    }
+  ],
+  "trackers": [
+    {
+      "name": "ExampleAnalyticsSDK",
+      "tracker_score": 55,
+      "evidence": "Observed",
+      "description": "Third-party analytics SDK detected."
+    }
+  ],
+  "security": {
+    "target_sdk": 32,
+    "min_sdk": 24,
+    "exported_components": 2,
+    "dangerous_exported_components": 1,
+    "debuggable": false,
+    "cleartext_traffic": false
+  },
+  "source_verified": true,
+  "source_type": "official-store",
+  "privacy_indicators": [35],
+  "benchmark_frequencies": {
+    "android.permission.INTERNET": 92,
+    "android.permission.POST_NOTIFICATIONS": 54,
+    "android.permission.CAMERA": 18,
+    "android.permission.RECORD_AUDIO": 4,
+    "android.permission.ACCESS_FINE_LOCATION": 7
+  }
+}

@@ -1,0 +1,128 @@
+[
+  {
+    "prefix": "com.google.android.gms.ads",
+    "name": "Google AdMob",
+    "tracker_score": 60,
+    "category": "ads",
+    "description": "Advertising and monetization delivery SDK."
+  },
+  {
+    "prefix": "com.google.firebase.analytics",
+    "name": "Google Firebase Analytics",
+    "tracker_score": 45,
+    "category": "analytics",
+    "description": "Application behavioral analytics and event telemetry."
+  },
+  {
+    "prefix": "com.facebook.ads",
+    "name": "Facebook Audience Network",
+    "tracker_score": 75,
+    "category": "ads",
+    "description": "Targeted advertising and behavioral attribution SDK."
+  },
+  {
+    "prefix": "com.facebook.appevents",
+    "name": "Facebook Analytics",
+    "tracker_score": 70,
+    "category": "analytics",
+    "description": "Social telemetry and demographic tracking SDK."
+  },
+  {
+    "prefix": "com.flurry",
+    "name": "Flurry Analytics",
+    "tracker_score": 65,
+    "category": "analytics",
+    "description": "Mobile analytics and user engagement tracking."
+  },
+  {
+    "prefix": "com.adjust.sdk",
+    "name": "Adjust",
+    "tracker_score": 70,
+    "category": "attribution",
+    "description": "Attribution tracking and install measurement framework."
+  },
+  {
+    "prefix": "com.appsflyer",
+    "name": "AppsFlyer",
+    "tracker_score": 70,
+    "category": "attribution",
+    "description": "Attribution and marketing performance measurement."
+  },
+  {
+    "prefix": "io.branch.referral",
+    "name": "Branch Metrics",
+    "tracker_score": 60,
+    "category": "attribution",
+    "description": "Deep-linking and attribution tracking library."
+  },
+  {
+    "prefix": "com.crashlytics",
+    "name": "Crashlytics",
+    "tracker_score": 30,
+    "category": "crash",
+    "description": "Diagnostic crash recording and telemetry."
+  },
+  {
+    "prefix": "com.google.firebase.crashlytics",
+    "name": "Firebase Crashlytics",
+    "tracker_score": 30,
+    "category": "crash",
+    "description": "Crash diagnostics and error logging telemetry."
+  },
+  {
+    "prefix": "io.sentry",
+    "name": "Sentry",
+    "tracker_score": 30,
+    "category": "crash",
+    "description": "Application error monitoring and diagnostic reporting."
+  },
+  {
+    "prefix": "com.unity3d.ads",
+    "name": "Unity Ads",
+    "tracker_score": 60,
+    "category": "ads",
+    "description": "Gaming and video advertising SDK."
+  },
+  {
+    "prefix": "com.applovin",
+    "name": "AppLovin",
+    "tracker_score": 65,
+    "category": "ads",
+    "description": "Mobile advertising and ad mediation network."
+  },
+  {
+    "prefix": "com.vungle",
+    "name": "Vungle",
+    "tracker_score": 65,
+    "category": "ads",
+    "description": "Video ad network and performance telemetry."
+  },
+  {
+    "prefix": "com.ironsource",
+    "name": "ironSource",
+    "tracker_score": 65,
+    "category": "ads",
+    "description": "Ad monetization and attribution platform."
+  },
+  {
+    "prefix": "com.inmobi",
+    "name": "InMobi",
+    "tracker_score": 70,
+    "category": "ads",
+    "description": "Mobile advertising and audience intelligence SDK."
+  },
+  {
+    "prefix": "com.amplitude",
+    "name": "Amplitude",
+    "tracker_score": 50,
+    "category": "analytics",
+    "description": "Product event telemetry and user action analytics."
+  },
+  {
+    "prefix": "com.mixpanel",
+    "name": "Mixpanel",
+    "tracker_score": 50,
+    "category": "analytics",
+    "description": "User behavioral tracking and event analytics."
+  }
+]

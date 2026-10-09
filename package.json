@@ -1,0 +1,9 @@
+{
+  "name": "privacyguard-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "node web/node_modules/vite/bin/vite.js web",
+    "build": "node web/node_modules/vite/bin/vite.js build web",
+    "preview": "node web/node_modules/vite/bin/vite.js preview web"
+  }
+}

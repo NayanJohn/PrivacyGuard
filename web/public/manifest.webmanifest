@@ -1,0 +1,46 @@
+{
+  "name": "PrivacyGuard — Understand Before You Trust",
+  "short_name": "PrivacyGuard",
+  "description": "Explainable Android APK Privacy Risk Analysis & On-Device App Security Suite",
+  "start_url": "/app",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "categories": ["security", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "My Applications",
+      "short_name": "My Apps",
+      "url": "/apps",
+      "description": "Scan and inspect installed application permissions"
+    },
+    {
+      "name": "Permission Dashboard",
+      "short_name": "Permissions",
+      "url": "/permissions",
+      "description": "Manage sensitive Android system permissions"
+    },
+    {
+      "name": "Runtime Monitor",
+      "short_name": "Monitor",
+      "url": "/runtime",
+      "description": "Live background probe and telemetry feed"
+    },
+    {
+      "name": "Security Alerts",
+      "short_name": "Alerts",
+      "url": "/alerts",
+      "description": "Review privacy intrusion alerts"
+    }
+  ]
+}

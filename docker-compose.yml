@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: privacyguard-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: privacyguard
+      POSTGRES_PASSWORD: privacyguard
+      POSTGRES_DB: privacyguard_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U privacyguard -d privacyguard_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  mobsf:
+    image: opensecurity/mobile-security-framework-mobsf:latest
+    container_name: privacyguard-mobsf
+    restart: unless-stopped
+    environment:
+      - MOBSF_API_KEY=mobsf_hackbios_dev_key
+    ports:
+      - "8001:8000"
+    volumes:
+      - mobsf_data:/root/.MobSF
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: privacyguard-backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://privacyguard:privacyguard@postgres:5432/privacyguard_db
+      MOBSF_URL: http://mobsf:8000
+      MOBSF_API_KEY: mobsf_hackbios_dev_key
+      JWT_SECRET: privacyguard_hackbios_shadow_secret_jwt_2026
+      PARENT_ALERT_THRESHOLD: 80
+      WEIGHT_ML: 0.40
+      WEIGHT_STATIC: 0.35
+      WEIGHT_HEURISTIC: 0.25
+      SITE_URL: http://localhost:5173
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+
+volumes:
+  pgdata:
+  mobsf_data:
